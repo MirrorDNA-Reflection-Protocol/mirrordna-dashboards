@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mirrordna-dashboards"
+version = "1.0.0"
+description = "Cognitive terminal dashboards for AI systems monitoring"
+readme = "README.md"
+authors = [{name = "Paul Desai", email = "paul@activemirror.ai"}]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Monitoring",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+]
+
+[project.scripts]
+cognitive-dashboard = "mirrordna_dashboards.cognitive:main"
+system-map = "mirrordna_dashboards.system_map:main"
+
+[project.urls]
+Homepage = "https://activemirror.ai"
+Repository = "https://github.com/activemirror/mirrordna-dashboards"
+Documentation = "https://docs.activemirror.ai"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mirrordna_dashboards*"]
