@@ -65,8 +65,8 @@ def _load_services():
     }
     # Known health paths for services without health_url in registry
     known_paths = {
-        "Trust Engine": "/",
-        "Chat Server": "/api/chat/health",
+        "Trust Engine": "/api/chat/health",
+        "Chat Server": "/",
         "MirrorGate": "/api/health",
         "Mesh Relay": "/ws",
         "Mirror Radio": "/",
